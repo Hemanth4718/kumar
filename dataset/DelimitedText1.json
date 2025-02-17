@@ -1,0 +1,45 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "weather_dataset.csv",
+				"folderPath": "input",
+				"fileSystem": "gen2tr"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "Temperature_C",
+				"type": "String"
+			},
+			{
+				"name": "Humidity_%",
+				"type": "String"
+			},
+			{
+				"name": "Wind_Speed_kmph",
+				"type": "String"
+			},
+			{
+				"name": "Weather_Condition",
+				"type": "String"
+			}
+		]
+	}
+}
